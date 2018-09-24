@@ -4,7 +4,7 @@ The following file provides syntax highlighting for the Impex syntax. For furthe
 
 ## Installation
 
-In order to install the Impex syntax highlighting, open up **Sublime Text 3** and go to *Preferences > Browse Packages...* . This will open a directory containing a **User** subfolder. Simply copy & paste the *impex.sublime-syntax* file from this repository into the User directory. Afterwards restart **Sublime Text 3** and the new syntax highlighting should be available whenever you open a file with an *\*.impex* or *\*.csv* extension.
+In order to install the Impex syntax highlighting, open up **Sublime Text 3** and go to *Preferences > Browse Packages...* . This will open a directory containing a **User** subfolder. Simply copy & paste the *impex.sublime-package* file from this repository into the User directory. Afterwards restart **Sublime Text 3** and the new syntax highlighting should be available whenever you open a file with an *\*.impex* or *\*.csv* extension.
 
 ## Preview
 
