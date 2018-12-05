@@ -1,0 +1,87 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+name: Impex
+scope: impex
+file_extensions:
+  - impex
+  - csv
+contexts:
+  main:
+
+    #- match: '\b(INSERT_UPDATE|INSERT|UPDATE|REMOVE)\s+(\w+)(?=[\[\s\;])\b'
+    - match: '\b(INSERT_UPDATE|INSERT|UPDATE|REMOVE)\s+\b'
+      scope: keyword
+
+
+
+    # Double quoted string
+    - match: '"'
+      scope: punctuation.definition.string.begin
+      push: double_quoted_string
+
+    # Single quoted strings
+    - match: ''''
+      scope: punctuation.definition.string.begin
+      push: single_quoted_string
+
+    # Comments
+    - match: '#'
+      scope: punctuation.definition.comment
+      push: line_comment
+
+    # Variables
+    - match: '(\$[a-zA-Z0-9]+)'
+      scope: constant.numeric
+
+    # Booleans
+    - match: '\b(true|false)\b'
+      scope: keyword.control
+
+    # Numbers
+    - match: '\b(-)?[0-9.]+\b'
+      scope: constant.numeric
+
+    # Subqueries
+    - match: '([a-zA-Z]+)\s*(\()'
+      pop: true
+      captures:
+        1: support.function
+        2: keyword
+
+    # ';' , '[' , ']' , '(' , ')'
+    - match: ';|\[|\]|\(|\)'
+      scope: keyword
+
+    # Attribute descriptors
+    - match: '(default|unique|forceWrite|mode)\s='
+      captures:
+        1: entity.name.function
+
+    # Catalog version
+    - match: ':\s*(Online|online|Staged|staged)'
+      captures:
+        1: meta.structure.dictionary.json string.quoted.double.json
+
+  single_quoted_string:
+    - meta_scope: string.quoted.double
+    - match: '\\.'
+      scope: constant.character.escape
+    - match: ''''
+      scope: punctuation.definition.string.end
+      pop: true
+
+  double_quoted_string:
+    - meta_scope: string.quoted.double
+    - match: '\\.'
+      scope: constant.character.escape
+    - match: '"'
+      scope: punctuation.definition.string.end
+      pop: true
+
+  line_comment:
+    - meta_scope: comment.line
+    - match: $
+      pop: true
+
+
