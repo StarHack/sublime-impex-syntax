@@ -54,7 +54,7 @@ contexts:
       scope: keyword
 
     # Attribute descriptors
-    - match: '(default|unique|forceWrite|mode)\s='
+    - match: '(default|unique|forceWrite|mode)\s*='
       captures:
         1: entity.name.function
 
