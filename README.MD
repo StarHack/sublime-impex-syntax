@@ -1,12 +1,12 @@
 # Sublime Text 3 - Impex Syntax
 
-The following file provides syntax highlighting for the Impex syntax. For further information, check out the [SAP Hybris Help Site].
+The following file provides syntax highlighting for the Impex syntax. For further information, check out the [SAP Commerce Cloud Help Site] (formerly known as SAP Hybris).
 
 ## Installation
 
-In order to install the Impex syntax highlighting, open up **Sublime Text 3** and go to *Preferences > Browse Packages...* . This will open a directory containing a **User** subfolder. 
+In order to install the Impex syntax highlighting, open up **Sublime Text 3** and go to *Preferences > Browse Packages...* . This will open a directory containing a **User** subdirectory. 
 
-Simply copy & paste the *impex* folder from this repository into the User directory. The changes are available immediately. Whenever you open a file with an *\*.impex* or *\*.csv* extension, highlighting should now be available.
+Simply copy & paste the *impex* folder from this repository into the User directory. The changes are available immediately. Whenever you open a file with an `*.impex` or `.csv` extension, highlighting should now be available.
 
 ## Preview
 
